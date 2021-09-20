@@ -11,9 +11,7 @@ import UIKit
 class StartViewController: UIViewController{
 
     @IBOutlet weak var startGame: UIButton!
-    
     @IBOutlet weak var score: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         startGame.setTitle("Начать игру", for: .normal)
@@ -29,23 +27,15 @@ class StartViewController: UIViewController{
             guard let _ = segue.destination as? TableViewControllerScore else {return}
         }
     }
-    
-    
-    
-    
-    
- //   @IBAction func unwindSegue(unwind: UIStoryboard) {}
-    
-    
 
- 
+ //   @IBAction func unwindSegue(unwind: UIStoryboard) {}
+
 }
 // MARK: - Extensions
 extension StartViewController: GameViewControllerDelegate {
   func totalScore(right: Double, score: Double) {
     Game.shared.infoGames.correctAnswer = right
     Game.shared.infoGames.totalQuestion = score
-    
     let ratio = Game.shared.infoGames.calcPercent()
     let record = Records(score: ratio)
     Game.shared.addRecord(record)

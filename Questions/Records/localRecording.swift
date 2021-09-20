@@ -21,7 +21,6 @@ class GameCaretaker {
         } catch {
             print(error)
         }
-        
     }
     func loadScore() -> [Records] {
         guard let data = UserDefaults.standard.data(forKey: key) else {

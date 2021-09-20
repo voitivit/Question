@@ -11,15 +11,11 @@ import UIKit
 class GameSesson {
     var correctAnswer: Double = 0
     var totalQuestion =  Double()
-    
-    
-    
+
     func calcPercent() -> Double {
         // Считаем процент правильно отвеченных вопросов
         (correctAnswer/totalQuestion)*100
-        
     }
-    
     func clearGameSession() {
         correctAnswer = 0
         totalQuestion = 0
