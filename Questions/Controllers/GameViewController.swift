@@ -2,92 +2,97 @@
 //  GameViewController.swift
 //  Questions
 //
-//  Created by emil kurbanov on 19.09.2021.
+//  Created by emil kurbanov on 26.09.2021.
 //
 
-import Foundation
-import UIKit
+import  UIKit
 protocol GameViewControllerDelegate: AnyObject {
-    func totalScore(right: Double, score: Double)
+  func didEndGame(right: Double, total: Double)
 }
+
 
 class GameViewController: UIViewController {
-  
-   
+    @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet var buttonQuestion: [UIButton]!
-    private var numberQuestion: Int = 0
-   weak var delegate: GameViewControllerDelegate?
-    private var question = [Question]()
+    @IBOutlet var answers: [UIButton]!
+    private var numberOfQuestion = Observable<Int> (0)
+    weak var delegate: GameViewControllerDelegate?
+    private var questionFacade = StartGameFacade()
+    private var difficultFacade = DifficultySettingsFacade()
+    
+    private var questionSequence: sequenceStrategyProtocol {
+      switch Game.shared.difficulty {
+      case .serial:
+        let strategy = serialStrategy(question: questionFacade.question)
+        return strategy
+      case .random:
+        let strategy = shuffleStrategy(question: questionFacade.question)
+        return strategy
+      }
+    }
+    
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        startGame()
-    
+      super.viewDidLoad()
+      numberOfQuestion.addObserver(self, options: [.new, .initial], closure: { [weak self] (index, _) in
+        guard let self = self else { return }
+        Game.shared.info.currentQuestion = index + 1
+        let formatted = String(format: "%.1f", Game.shared.info.calcPercent())
+
+        self.statusLabel.text = "Вопрос №\(Game.shared.info.currentQuestion) (\(formatted)%)"
+      })
     }
+    
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: animated)
-        startThisGame(index: numberQuestion)
-      }
-
-      override func viewWillDisappear(_ animated: Bool) {
-          super.viewWillDisappear(animated)
-          navigationController?.setNavigationBarHidden(false, animated: animated)
-      }
-
-    @IBAction func pressButton (_ sender: UIButton) {
-        if sender.titleLabel?.text == question[numberQuestion].theAnswers {
-            numberQuestion += 1
-            if numberQuestion < question.count {
-                startThisGame(index: numberQuestion)
-            } else {
-            finalGame()
-            }
-            
+      super.viewWillAppear(animated)
+      navigationController?.setNavigationBarHidden(true, animated: animated)
+      gamePlay(index: numberOfQuestion.value)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    @IBAction func didPressedAnswer(_ sender: UIButton) {
+      if  let  _ = questionFacade.question.first(where: {$0.rightAnswer == sender.titleLabel?.text}) {
+        numberOfQuestion.value += 1
+        if numberOfQuestion.value < questionFacade.question.count {
+          gamePlay(index: numberOfQuestion.value)
         } else {
-            finalGame()
+          gameOver()
         }
+      } else {
+        gameOver()
+      }
+    }
+  }
+
+  // MARK: - Extensions
+
+  extension GameViewController {
+    
+    func gamePlay(index: Int) {
+      let question = questionSequence.question[index]
+      questionLabel.text = question.about
+      for (index, element) in  answers.enumerated() {
+        element.setTitle(question.answers[index], for: .normal)
+      }
     }
     
-    
+    func gameOver() {
+      let text: String
+      if numberOfQuestion.value < questionFacade.question.count {
+        text = "Вы ответили на \(numberOfQuestion.value) вопросов"
+      } else {
+        text = "Вы ответили на все вопросы"
+      }
+      let alert = UIAlertController(title: "Игра окончена", message: text, preferredStyle: .alert)
+      alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+        self.navigationController?.popToRootViewController(animated: true)
+      }))
+      self.present(alert, animated: true)
+      delegate?.didEndGame(right: Double(numberOfQuestion.value), total: Double(questionFacade.question.count))
+      
+    }
 }
-
-extension GameViewController {
-    func startGame() {
-        let question1 = Question(question: "Столица Бразилии", answers: ["Рио", "Де Гама", "Лондон", "Бразилиа"], theAnswers: "Бразилиа")
-        let question2 = Question(question: "Дата основания города Москва?", answers: ["1147", "2009", "954", "1677"], theAnswers: "1147")
-        let question3 = Question(question: "Чему равен корень из 100?", answers: ["90", "10", "5", "9"], theAnswers: "10")
-        let question4 = Question(question: "8 умножить на 8, равно?", answers: ["64", "81", "16", "9" ], theAnswers: "64")
-        
-        question.append(question1)
-        question.append(question2)
-        question.append(question3)
-        question.append(question4)
-    }
-
-    func startThisGame(index: Int) {
-        let question = question[index]
-        questionLabel.text = question.question
-        for (index, element) in buttonQuestion.enumerated() {
-            element.setTitle(question.answers[index], for: .normal)
-        }
-    }
-        func finalGame() {
-            let text:String
-            if numberQuestion < question.count {
-                text = "Вы правильно ответили на \(numberQuestion)  вопросов"
-            } else {
-                text = "Поздравляем, вы ответили на все вопросы!"
-            }
-            let alert = UIAlertController(title: "Игра окончена", message: text, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Закончить игру!", style: .default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-            //Надо обернуть в Double
-            delegate?.totalScore(right: Double(numberQuestion), score: Double(question.count))
-            
-        }
-        
-    }
-    
-

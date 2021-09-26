@@ -8,17 +8,23 @@
 import Foundation
 import UIKit
 
-class GameSesson {
-    var correctAnswer: Double = 0
-    var totalQuestion =  Double()
-
-    func calcPercent() -> Double {
-        // Считаем процент правильно отвеченных вопросов
-        (correctAnswer/totalQuestion)*100
-    }
-    func clearGameSession() {
-        correctAnswer = 0
-        totalQuestion = 0
-    }
+class GameSession {
+  var correctAnswers: Double = 0
+  var totalQuestions = Double()
+  var currentQuestion: Int = 0
+  
+  func calcPercent() -> Double {
+  (Double(currentQuestion) / totalQuestions) * 100
+  }
+  
+  func calcRatio() -> Double {
+  correctAnswers / totalQuestions
+  }
+  
+  func clearSession() {
+    correctAnswers = 0
+    totalQuestions = 0
+    currentQuestion = 0
+  }
 }
 

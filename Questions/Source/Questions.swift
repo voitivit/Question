@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 struct Question: Codable {
-    var question: String
-    var answers: [String]
-    var theAnswers: String
+  var about: String
+  var answers: [String]
+  var rightAnswer: String
 }

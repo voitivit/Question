@@ -12,15 +12,30 @@
 		F732903B26D6367700238F8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F732903926D6367700238F8F /* Main.storyboard */; };
 		F732903D26D6367A00238F8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F732903C26D6367A00238F8F /* Assets.xcassets */; };
 		F732904026D6367A00238F8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F732903E26D6367A00238F8F /* LaunchScreen.storyboard */; };
-		F732904826D63A2A00238F8F /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F732904726D63A2A00238F8F /* StartViewController.swift */; };
 		F732904A26D6638B00238F8F /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = F732904926D6638B00238F8F /* Game.swift */; };
-		F732904C26D665A500238F8F /* Records.swift in Sources */ = {isa = PBXBuildFile; fileRef = F732904B26D665A500238F8F /* Records.swift */; };
 		F732904E26D7F87400238F8F /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F732904D26D7F87400238F8F /* Questions.swift */; };
-		F732905026D8095900238F8F /* localRecording.swift in Sources */ = {isa = PBXBuildFile; fileRef = F732904F26D8095900238F8F /* localRecording.swift */; };
 		F732905226D8116300238F8F /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F732905126D8116300238F8F /* GameSession.swift */; };
-		F732905726D9019B00238F8F /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F732905626D9019B00238F8F /* GameViewController.swift */; };
-		F732905926D91AC000238F8F /* TableViewControllerScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F732905826D91AC000238F8F /* TableViewControllerScore.swift */; };
-		F732905B26D91E9300238F8F /* TableViewCellScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F732905A26D91E9300238F8F /* TableViewCellScore.swift */; };
+		F780BC032700BFAA00DC0EAB /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = F780BC022700BFAA00DC0EAB /* Difficulty.swift */; };
+		F780BC072700C31400DC0EAB /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F780BC062700C31400DC0EAB /* OptionsViewController.swift */; };
+		F780BC092700C60800DC0EAB /* AddQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F780BC082700C60800DC0EAB /* AddQuestionViewController.swift */; };
+		F780BC0E2700CC7C00DC0EAB /* AddQuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F780BC0C2700CC7C00DC0EAB /* AddQuestionTableViewCell.xib */; };
+		F780BC102700D24300DC0EAB /* AddQuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F780BC0F2700D24300DC0EAB /* AddQuestionTableViewCell.swift */; };
+		F780BC122700D3D100DC0EAB /* QuestionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F780BC112700D3D100DC0EAB /* QuestionBuilder.swift */; };
+		F780BC142700D42F00DC0EAB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F780BC132700D42F00DC0EAB /* MainViewController.swift */; };
+		F780BC162700D91600DC0EAB /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F780BC152700D91600DC0EAB /* GameViewController.swift */; };
+		F7ABB96C2700ECFC0046B29A /* RecordsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABB96B2700ECFC0046B29A /* RecordsTableViewController.swift */; };
+		F7ABB9742700EDE40046B29A /* RecordsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABB9722700EDE40046B29A /* RecordsTableViewCell.swift */; };
+		F7ABB9752700EDE40046B29A /* RecordsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7ABB9732700EDE40046B29A /* RecordsTableViewCell.xib */; };
+		F7ABB9772700F0AE0046B29A /* StartGameFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABB9762700F0AE0046B29A /* StartGameFacade.swift */; };
+		F7ABB97A2700F0D00046B29A /* DifficultySettingsFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABB9792700F0D00046B29A /* DifficultySettingsFacade.swift */; };
+		F7ABB97C2700F0F00046B29A /* ObservableOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABB97B2700F0F00046B29A /* ObservableOptions.swift */; };
+		F7ABB97F2700F11C0046B29A /* sequenceStrategyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABB97E2700F11C0046B29A /* sequenceStrategyProtocol.swift */; };
+		F7ABB9822700F14E0046B29A /* serialStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABB9812700F14E0046B29A /* serialStrategy.swift */; };
+		F7ABB9842700F1640046B29A /* shuffleStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABB9832700F1640046B29A /* shuffleStrategy.swift */; };
+		F7ABB9862700F17E0046B29A /* StrategyChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABB9852700F17D0046B29A /* StrategyChooser.swift */; };
+		F7ABB9892700F2920046B29A /* QuestionCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABB9882700F2920046B29A /* QuestionCaretaker.swift */; };
+		F7ABB98B2700F2B40046B29A /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABB98A2700F2B40046B29A /* Record.swift */; };
+		F7ABB98D2700F2D00046B29A /* RecordsCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABB98C2700F2D00046B29A /* RecordsCaretaker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,15 +46,30 @@
 		F732903C26D6367A00238F8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F732903F26D6367A00238F8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F732904126D6367A00238F8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F732904726D63A2A00238F8F /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		F732904926D6638B00238F8F /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		F732904B26D665A500238F8F /* Records.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Records.swift; sourceTree = "<group>"; };
 		F732904D26D7F87400238F8F /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
-		F732904F26D8095900238F8F /* localRecording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = localRecording.swift; sourceTree = "<group>"; };
 		F732905126D8116300238F8F /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
-		F732905626D9019B00238F8F /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		F732905826D91AC000238F8F /* TableViewControllerScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerScore.swift; sourceTree = "<group>"; };
-		F732905A26D91E9300238F8F /* TableViewCellScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellScore.swift; sourceTree = "<group>"; };
+		F780BC022700BFAA00DC0EAB /* Difficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
+		F780BC062700C31400DC0EAB /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
+		F780BC082700C60800DC0EAB /* AddQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionViewController.swift; sourceTree = "<group>"; };
+		F780BC0C2700CC7C00DC0EAB /* AddQuestionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddQuestionTableViewCell.xib; sourceTree = "<group>"; };
+		F780BC0F2700D24300DC0EAB /* AddQuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionTableViewCell.swift; sourceTree = "<group>"; };
+		F780BC112700D3D100DC0EAB /* QuestionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBuilder.swift; sourceTree = "<group>"; };
+		F780BC132700D42F00DC0EAB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F780BC152700D91600DC0EAB /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		F7ABB96B2700ECFC0046B29A /* RecordsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsTableViewController.swift; sourceTree = "<group>"; };
+		F7ABB9722700EDE40046B29A /* RecordsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsTableViewCell.swift; sourceTree = "<group>"; };
+		F7ABB9732700EDE40046B29A /* RecordsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordsTableViewCell.xib; sourceTree = "<group>"; };
+		F7ABB9762700F0AE0046B29A /* StartGameFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameFacade.swift; sourceTree = "<group>"; };
+		F7ABB9792700F0D00046B29A /* DifficultySettingsFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultySettingsFacade.swift; sourceTree = "<group>"; };
+		F7ABB97B2700F0F00046B29A /* ObservableOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableOptions.swift; sourceTree = "<group>"; };
+		F7ABB97E2700F11C0046B29A /* sequenceStrategyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sequenceStrategyProtocol.swift; sourceTree = "<group>"; };
+		F7ABB9812700F14E0046B29A /* serialStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = serialStrategy.swift; sourceTree = "<group>"; };
+		F7ABB9832700F1640046B29A /* shuffleStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shuffleStrategy.swift; sourceTree = "<group>"; };
+		F7ABB9852700F17D0046B29A /* StrategyChooser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrategyChooser.swift; sourceTree = "<group>"; };
+		F7ABB9882700F2920046B29A /* QuestionCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCaretaker.swift; sourceTree = "<group>"; };
+		F7ABB98A2700F2B40046B29A /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		F7ABB98C2700F2D00046B29A /* RecordsCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsCaretaker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,9 +105,11 @@
 				F732903326D6367700238F8F /* AppDelegate.swift */,
 				F732903526D6367700238F8F /* SceneDelegate.swift */,
 				F732903926D6367700238F8F /* Main.storyboard */,
+				F780BC0A2700C60F00DC0EAB /* AddQuestions */,
+				F7ABB9872700F1D80046B29A /* Options */,
+				F7ABB96D2700ED540046B29A /* Records */,
 				F732905C26DBA72000238F8F /* Controllers */,
 				F732905E26DBA7AD00238F8F /* Source */,
-				F732905D26DBA79200238F8F /* Records */,
 				F732903C26D6367A00238F8F /* Assets.xcassets */,
 				F732903E26D6367A00238F8F /* LaunchScreen.storyboard */,
 				F732904126D6367A00238F8F /* Info.plist */,
@@ -88,31 +120,84 @@
 		F732905C26DBA72000238F8F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F732905A26D91E9300238F8F /* TableViewCellScore.swift */,
-				F732905826D91AC000238F8F /* TableViewControllerScore.swift */,
-				F732904726D63A2A00238F8F /* StartViewController.swift */,
-				F732905626D9019B00238F8F /* GameViewController.swift */,
+				F780BC152700D91600DC0EAB /* GameViewController.swift */,
+				F780BC132700D42F00DC0EAB /* MainViewController.swift */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		F732905D26DBA79200238F8F /* Records */ = {
-			isa = PBXGroup;
-			children = (
-				F732904F26D8095900238F8F /* localRecording.swift */,
-				F732904B26D665A500238F8F /* Records.swift */,
-			);
-			path = Records;
 			sourceTree = "<group>";
 		};
 		F732905E26DBA7AD00238F8F /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				F732904926D6638B00238F8F /* Game.swift */,
+				F780BC022700BFAA00DC0EAB /* Difficulty.swift */,
 				F732905126D8116300238F8F /* GameSession.swift */,
 				F732904D26D7F87400238F8F /* Questions.swift */,
+				F7ABB9882700F2920046B29A /* QuestionCaretaker.swift */,
+				F7ABB98A2700F2B40046B29A /* Record.swift */,
+				F7ABB98C2700F2D00046B29A /* RecordsCaretaker.swift */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		F780BC0A2700C60F00DC0EAB /* AddQuestions */ = {
+			isa = PBXGroup;
+			children = (
+				F780BC082700C60800DC0EAB /* AddQuestionViewController.swift */,
+				F780BC0F2700D24300DC0EAB /* AddQuestionTableViewCell.swift */,
+				F780BC0C2700CC7C00DC0EAB /* AddQuestionTableViewCell.xib */,
+				F780BC112700D3D100DC0EAB /* QuestionBuilder.swift */,
+				F7ABB9782700F0B90046B29A /* Facade */,
+			);
+			path = AddQuestions;
+			sourceTree = "<group>";
+		};
+		F7ABB96D2700ED540046B29A /* Records */ = {
+			isa = PBXGroup;
+			children = (
+				F7ABB96B2700ECFC0046B29A /* RecordsTableViewController.swift */,
+				F7ABB9722700EDE40046B29A /* RecordsTableViewCell.swift */,
+				F7ABB9732700EDE40046B29A /* RecordsTableViewCell.xib */,
+			);
+			path = Records;
+			sourceTree = "<group>";
+		};
+		F7ABB9782700F0B90046B29A /* Facade */ = {
+			isa = PBXGroup;
+			children = (
+				F7ABB9762700F0AE0046B29A /* StartGameFacade.swift */,
+				F7ABB9792700F0D00046B29A /* DifficultySettingsFacade.swift */,
+				F7ABB97D2700F0F50046B29A /* Observe */,
+			);
+			path = Facade;
+			sourceTree = "<group>";
+		};
+		F7ABB97D2700F0F50046B29A /* Observe */ = {
+			isa = PBXGroup;
+			children = (
+				F7ABB97B2700F0F00046B29A /* ObservableOptions.swift */,
+				F7ABB9802700F1210046B29A /* Strategy */,
+			);
+			path = Observe;
+			sourceTree = "<group>";
+		};
+		F7ABB9802700F1210046B29A /* Strategy */ = {
+			isa = PBXGroup;
+			children = (
+				F7ABB97E2700F11C0046B29A /* sequenceStrategyProtocol.swift */,
+				F7ABB9812700F14E0046B29A /* serialStrategy.swift */,
+				F7ABB9832700F1640046B29A /* shuffleStrategy.swift */,
+				F7ABB9852700F17D0046B29A /* StrategyChooser.swift */,
+			);
+			path = Strategy;
+			sourceTree = "<group>";
+		};
+		F7ABB9872700F1D80046B29A /* Options */ = {
+			isa = PBXGroup;
+			children = (
+				F780BC062700C31400DC0EAB /* OptionsViewController.swift */,
+			);
+			path = Options;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,7 +257,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7ABB9752700EDE40046B29A /* RecordsTableViewCell.xib in Resources */,
 				F732904026D6367A00238F8F /* LaunchScreen.storyboard in Resources */,
+				F780BC0E2700CC7C00DC0EAB /* AddQuestionTableViewCell.xib in Resources */,
 				F732903D26D6367A00238F8F /* Assets.xcassets in Resources */,
 				F732903B26D6367700238F8F /* Main.storyboard in Resources */,
 			);
@@ -185,17 +272,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F732905926D91AC000238F8F /* TableViewControllerScore.swift in Sources */,
 				F732903426D6367700238F8F /* AppDelegate.swift in Sources */,
-				F732904826D63A2A00238F8F /* StartViewController.swift in Sources */,
 				F732905226D8116300238F8F /* GameSession.swift in Sources */,
-				F732905026D8095900238F8F /* localRecording.swift in Sources */,
-				F732905726D9019B00238F8F /* GameViewController.swift in Sources */,
-				F732905B26D91E9300238F8F /* TableViewCellScore.swift in Sources */,
-				F732904C26D665A500238F8F /* Records.swift in Sources */,
+				F780BC102700D24300DC0EAB /* AddQuestionTableViewCell.swift in Sources */,
+				F780BC142700D42F00DC0EAB /* MainViewController.swift in Sources */,
+				F7ABB9742700EDE40046B29A /* RecordsTableViewCell.swift in Sources */,
+				F7ABB9842700F1640046B29A /* shuffleStrategy.swift in Sources */,
+				F7ABB9862700F17E0046B29A /* StrategyChooser.swift in Sources */,
+				F7ABB97A2700F0D00046B29A /* DifficultySettingsFacade.swift in Sources */,
+				F780BC072700C31400DC0EAB /* OptionsViewController.swift in Sources */,
 				F732904E26D7F87400238F8F /* Questions.swift in Sources */,
+				F7ABB97C2700F0F00046B29A /* ObservableOptions.swift in Sources */,
+				F7ABB9822700F14E0046B29A /* serialStrategy.swift in Sources */,
+				F7ABB97F2700F11C0046B29A /* sequenceStrategyProtocol.swift in Sources */,
+				F7ABB98D2700F2D00046B29A /* RecordsCaretaker.swift in Sources */,
+				F7ABB9772700F0AE0046B29A /* StartGameFacade.swift in Sources */,
 				F732903626D6367700238F8F /* SceneDelegate.swift in Sources */,
+				F7ABB98B2700F2B40046B29A /* Record.swift in Sources */,
+				F7ABB96C2700ECFC0046B29A /* RecordsTableViewController.swift in Sources */,
 				F732904A26D6638B00238F8F /* Game.swift in Sources */,
+				F780BC162700D91600DC0EAB /* GameViewController.swift in Sources */,
+				F7ABB9892700F2920046B29A /* QuestionCaretaker.swift in Sources */,
+				F780BC092700C60800DC0EAB /* AddQuestionViewController.swift in Sources */,
+				F780BC032700BFAA00DC0EAB /* Difficulty.swift in Sources */,
+				F780BC122700D3D100DC0EAB /* QuestionBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
