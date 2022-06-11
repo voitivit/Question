@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="703" id="KGk-i7-Jjw" customClass="AddQuestionTableViewCell" customModule="Questions" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="772" height="703"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="772" height="703"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qri-de-Chz">
+                        <rect key="frame" x="15" y="15" width="59.5" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вариант А:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WoZ-ex-Nf3">
+                        <rect key="frame" x="35" y="50.5" width="87.5" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вариант Б:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qH4-gb-bMV">
+                        <rect key="frame" x="35" y="86" width="86.5" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вариант В:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2uv-pi-n3E">
+                        <rect key="frame" x="35" y="121.5" width="87" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вариант Г:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1XW-Tj-gzG">
+                        <rect key="frame" x="35" y="157" width="84.5" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите вариант ответа" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pra-f1-323">
+                        <rect key="frame" x="125.5" y="150.5" width="190.5" height="34"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Правильный ответ:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0G-FH-Jtd">
+                        <rect key="frame" x="15" y="192.5" width="152" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите вариант ответа" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oRq-qQ-fs9">
+                        <rect key="frame" x="129.5" y="44" width="190.5" height="34"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите вариант ответа" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yr2-Z9-iI6">
+                        <rect key="frame" x="127.5" y="79.5" width="190.5" height="34"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите вариант ответа" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IkI-y9-E6u">
+                        <rect key="frame" x="128" y="115" width="190.5" height="34"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите вопрос" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CIu-8n-bcK">
+                        <rect key="frame" x="79.5" y="8.5" width="677.5" height="34"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите правильный ответ" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Ld-57-Oh7">
+                        <rect key="frame" x="172" y="-282" width="210" height="970"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="1XW-Tj-gzG" firstAttribute="top" secondItem="2uv-pi-n3E" secondAttribute="bottom" constant="15" id="0E7-ZJ-mqq"/>
+                    <constraint firstItem="5Ld-57-Oh7" firstAttribute="centerY" secondItem="X0G-FH-Jtd" secondAttribute="centerY" id="1DK-pz-qui"/>
+                    <constraint firstAttribute="trailing" secondItem="CIu-8n-bcK" secondAttribute="trailing" constant="15" id="2kc-jA-RF5"/>
+                    <constraint firstItem="Qri-de-Chz" firstAttribute="centerY" secondItem="CIu-8n-bcK" secondAttribute="centerY" id="485-Z2-361"/>
+                    <constraint firstItem="1XW-Tj-gzG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="15" id="7Th-hH-281"/>
+                    <constraint firstItem="2uv-pi-n3E" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="15" id="8dn-Ml-adJ"/>
+                    <constraint firstItem="X0G-FH-Jtd" firstAttribute="top" secondItem="1XW-Tj-gzG" secondAttribute="bottom" constant="15" id="AgI-4G-64Z"/>
+                    <constraint firstAttribute="bottom" secondItem="5Ld-57-Oh7" secondAttribute="bottom" constant="15" id="EW9-YB-aLK"/>
+                    <constraint firstItem="2uv-pi-n3E" firstAttribute="centerY" secondItem="IkI-y9-E6u" secondAttribute="centerY" id="HUe-hL-PeE"/>
+                    <constraint firstItem="CIu-8n-bcK" firstAttribute="leading" secondItem="Qri-de-Chz" secondAttribute="trailing" constant="5" id="JCf-jT-oVa"/>
+                    <constraint firstItem="5Ld-57-Oh7" firstAttribute="leading" secondItem="X0G-FH-Jtd" secondAttribute="trailing" constant="5" id="Ks2-bl-ror"/>
+                    <constraint firstItem="Qri-de-Chz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="MgN-OS-9Zn"/>
+                    <constraint firstItem="qH4-gb-bMV" firstAttribute="top" secondItem="WoZ-ex-Nf3" secondAttribute="bottom" constant="15" id="Nyn-ce-R9n"/>
+                    <constraint firstItem="WoZ-ex-Nf3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="15" id="Rei-pW-1cs"/>
+                    <constraint firstItem="Yr2-Z9-iI6" firstAttribute="leading" secondItem="qH4-gb-bMV" secondAttribute="trailing" constant="6" id="UkQ-Rd-KF7"/>
+                    <constraint firstItem="2uv-pi-n3E" firstAttribute="top" secondItem="qH4-gb-bMV" secondAttribute="bottom" constant="15" id="YwX-oD-uSU"/>
+                    <constraint firstItem="1XW-Tj-gzG" firstAttribute="centerY" secondItem="Pra-f1-323" secondAttribute="centerY" id="acQ-mg-cNK"/>
+                    <constraint firstItem="Qri-de-Chz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="bdv-D7-jtE"/>
+                    <constraint firstItem="WoZ-ex-Nf3" firstAttribute="top" secondItem="Qri-de-Chz" secondAttribute="bottom" constant="15" id="eBS-Tl-KWt"/>
+                    <constraint firstItem="X0G-FH-Jtd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="f3w-VJ-tF7"/>
+                    <constraint firstItem="Pra-f1-323" firstAttribute="leading" secondItem="1XW-Tj-gzG" secondAttribute="trailing" constant="6" id="fDo-De-tZz"/>
+                    <constraint firstItem="IkI-y9-E6u" firstAttribute="leading" secondItem="2uv-pi-n3E" secondAttribute="trailing" constant="6" id="gfU-Kk-Aup"/>
+                    <constraint firstItem="WoZ-ex-Nf3" firstAttribute="centerY" secondItem="oRq-qQ-fs9" secondAttribute="centerY" id="qTA-81-Eg6"/>
+                    <constraint firstItem="qH4-gb-bMV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="15" id="tbK-nW-efD"/>
+                    <constraint firstItem="qH4-gb-bMV" firstAttribute="centerY" secondItem="Yr2-Z9-iI6" secondAttribute="centerY" id="yAP-7D-vBr"/>
+                    <constraint firstItem="oRq-qQ-fs9" firstAttribute="leading" secondItem="WoZ-ex-Nf3" secondAttribute="trailing" constant="7" id="yTQ-i4-adO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="questionTextField" destination="CIu-8n-bcK" id="mrw-ow-CiW"/>
+                <outlet property="rightAnswerTextField" destination="5Ld-57-Oh7" id="nOz-yc-73n"/>
+                <outletCollection property="answersTextFields" destination="oRq-qQ-fs9" collectionClass="NSMutableArray" id="a5P-GG-0bC"/>
+            </connections>
+            <point key="canvasLocation" x="197.10144927536234" y="295.64732142857139"/>
+        </tableViewCell>
+    </objects>
+</document>
